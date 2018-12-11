@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+screen {
+    100%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+/*---------------------------------------------------
+1: Variables & Common styling
+2: Layout / Grid
+3: Form styling
+4: Table styles
+5: Page specific styles
+---------------------------------------------------*/
+
+/*---------------------------------------------------
+1: Variables & Common styling
+---------------------------------------------------*/
+/*Variables*/
+:root {
+    --color-dark: #333;
+    --color-light: #FEFEFE;
+    --color-accent: #f90;
+}
+
+/*Common styling classes*/
+.rounded {}
+
+/*---------------------------------------------------
+2: Layout / Grid
+---------------------------------------------------*/
+/*Grid container*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 15px;
+    justify-items: center;
+    max-width: 768px;
+    margin: 0 auto;
+    background-color: var(--color-light);
+
+}
+
+.afleveringerpage .container {
+    justify-items: left;
+}
+
+/*Grid column items*/
+.login_splash {
+    width: 48rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+/*loginpage*/
+.loginform {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: 6;
+
+}
+
+.huskmig {}
+
+.glemtpassword {}
+
+/*loginpage grid*/
+.formgroup {}
+
+.formgroup label {}
+
+.formgroup input {}
+
+.formgroup,
+.glemtpassword {}
+
+/*afleveringer page*/
+.afleveringer {}
+
+/*---------------------------------------------------
+3: Form styling
+---------------------------------------------------*/
+/*Inputs*/
+label,
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=submit] {
+    padding: 1em;
+}
+
+input[type=submit] {
+    background-color: black;
+    color: white;
+    transition: background-color 1s, color 1s;
+}
+
+input[type=submit]:hover {
+    color: black;
+    background-color: var(--color-accent);
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus {
+    border: 3px solid #ff9900;
+    outline: -webkit-focus-ring-color auto 0;
+}
+
+
+/*---------------------------------------------------
+4: Table styles
+---------------------------------------------------*/
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+th {
+    background-color: var(--color-dark) color: var(--color-light);
+}
+
+td {
+    border: 1px dashed var(--color-accent);
+}
+
+/*---------------------------------------------------
+5: Page specific styles
+---------------------------------------------------*/
+/*Login page*/
+.loginpage {
+    background-color: aqua;
+}
